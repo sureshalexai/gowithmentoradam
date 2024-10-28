@@ -7,7 +7,10 @@ import (
 func main() {
 	var Name string
 	fmt.Println("Please Enter your Name: ")
-	fmt.Scanln(&Name)
+	_, err := fmt.Scanln(&Name)
+	if err != nil {
+		fmt.Println(err)
+	}
 
 	fmt.Printf("Hello %s", Name)
 }
